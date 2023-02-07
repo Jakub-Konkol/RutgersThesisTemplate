@@ -1,2 +1,2 @@
 # RutgersThesisTemplate
- A latex template formmated for Rutgers thesis/dissertations
+ A latex template formated for Rutgers thesis/dissertations
