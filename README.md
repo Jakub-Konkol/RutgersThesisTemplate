@@ -77,7 +77,7 @@ If you would like to make a larger acknowledgement, you may use the `acknowledge
 This section is always after the abstract.
 
 ### Dedication
-If you would like to make a smaller dedication, you may use the `\dedication{}' command and enter your dedication between the `{}`.
+If you would like to make a smaller dedication, you may use the `\dedication{}` command and enter your dedication between the `{}`.
 
 I've seen this after the acknowledgements if there is both, but I don't know if there is any set order. Either way, this is after the abstract.
 
