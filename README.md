@@ -46,10 +46,10 @@ It is VERY IMPORTANT there are no spaces between the import options.
 1. Replace the contents of `\author` with your name.
 2. Replace the contents of `\title` with the title.
 3. Replace the contents of `\graduationDate` with your intended graudation date (October, January, or May and year) or when your proposal defense is.
-4. Replace the contents of `\supervisor` with your professor's name. If you are co-advised, write both as `XXX and YYYY'.
+4. Replace the contents of `\supervisor` with your professor's name. If you are co-advised, write both as `XXX and YYYY`.
 
 ### Copyright page
-If you are preparing a thesis or dissertation, you include a copyright page using the command `\copyrightPage'. If you are preparing your proposal, delete the command from the template.
+If you are preparing a thesis or dissertation, you include a copyright page using the command `\copyrightPage`. If you are preparing your proposal, delete the command from the template.
 
 ### Abstract
 Enter your abstract into an `abstract` environment. 
@@ -82,7 +82,7 @@ If you would like to make a smaller dedication, you may use the `\dedication{}` 
 I've seen this after the acknowledgements if there is both, but I don't know if there is any set order. Either way, this is after the abstract.
 
 ### Main body content
-I would recommend you make individual .tex files for your chapters and incorporate them into main.tex using `\include{}' commands. The template currently some things written into the document, but that's only to show what the chapters look like.
+I would recommend you make individual .tex files for your chapters and incorporate them into main.tex using `\include{}` commands. The template currently some things written into the document, but that's only to show what the chapters look like.
 
 ### Bibliography
 I leave this up to you in case you have a preference of BibLaTeX vs. BibTex. The guidelines state to "conform to generally accepted practice in the discipline," so it's on you to get the .bst and incorporate your bib file.
