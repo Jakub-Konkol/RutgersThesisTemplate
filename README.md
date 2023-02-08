@@ -1,6 +1,8 @@
 # Rutgers Thesis Template
  A latex template formatted for Rutgers thesis/dissertations.
  
+ This project is not affiliated with Rutgers.
+ 
  ## How to use
  
  Begin by downloading this folder and it's contents and then unzipping it. The following will list the 
