@@ -1,5 +1,5 @@
 # Rutgers Thesis Template
- A latex template formated for Rutgers thesis/dissertations.
+ A latex template formatted for Rutgers thesis/dissertations.
  
  ## How to use
  
@@ -88,12 +88,13 @@ I would recommend you make individual .tex files for your chapters and incorpora
 I leave this up to you in case you have a preference of BibLaTeX vs. BibTex. The guidelines state to "conform to generally accepted practice in the discipline," so it's on you to get the .bst and incorporate your bib file.
 
 # Sources
-Everything came from the Electronic Thesis and Disseration Style Guide from the Rutgers School of Graduate Studies. You can find everything here: https://grad.rutgers.edu/academics/graduation/electronic-thesis-and-dissertation-style-guide
+The information for the formatting is sourced from the Electronic Thesis and Disseration Style Guide from the Rutgers School of Graduate Studies. You can find that resource here: https://grad.rutgers.edu/academics/graduation/electronic-thesis-and-dissertation-style-guide
 
 # Limitations
 - I made this from the standpoint of an engineer so I included the engineering degrees. If you are interested in using this template outside of engineering, let me know and I can incorporate your field for you.
 - If you are co-advised, the abstract currently does not change to acknowledge there is more than one advisor. You can change the RUAbstract.sty file to add an `s` to Director on line 36.
 - I'm testing this as I work on my thesis so errors may exist.
+- It's on you to verify that the template is acceptable for your department.
 
 # License
-I am publishing this under the LaTeX Project Public License 1.3c. A copy may be seend here: https://www.latex-project.org/lppl.txt.
+I am publishing this under the LaTeX Project Public License 1.3c. A copy may be seen here: https://www.latex-project.org/lppl.txt.
