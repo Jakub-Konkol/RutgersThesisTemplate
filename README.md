@@ -9,7 +9,7 @@
  changes you will need to make to `main.tex` to use this template for your own thesis.
  
  ### RUTitle options
- The import of RUTitle (line 25) takes several options which will adjust the document as appropriate 
+ The import of RUTitle ([line 33](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L33)) takes several options which will adjust the document as appropriate 
  for terminology and format.
  
 To choose the field of engineering, replace ``CBE`` with any of the following:
@@ -42,16 +42,14 @@ Some examples:
  - A BME doctoral student preparing their proposal will have
  `\usepackage[BME,PhD,proposal]{RuTitle}`
 
-It is VERY IMPORTANT there are no spaces between the import options.
-
 ### Author details section
-1. Replace the contents of `\author` with your name.
-2. Replace the contents of `\title` with the title.
-3. Replace the contents of `\graduationDate` with your intended graudation date (October, January, or May and year) or when your proposal defense is.
-4. Replace the contents of `\supervisor` with your professor's name. If you are co-advised, write both as `XXX and YYYY`.
+1. ([Line 60](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L60)) Replace the contents of `\author` with your name.
+2. ([Line 61](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L61)) Replace the contents of `\title` with the title.
+3. ([Line 62](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L62)) Replace the contents of `\graduationDate` with your intended graudation date (October, January, or May and year) or the month and year of your proposal defense is.
+4. ([Line 63](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L63)) Replace the contents of `\supervisor` with your professor's name. If you are co-advised, write both as `XXX and YYYY`.
 
 ### Copyright page
-If you are preparing a thesis or dissertation, you include a copyright page using the command `\copyrightPage`. If you are preparing your proposal, delete the command from the template.
+If you are preparing a thesis or dissertation, you include a copyright page using the command `\copyrightPage`. If you are preparing your proposal you must delete the command, line 106, from the template.
 
 ### Abstract
 Enter your abstract into an `abstract` environment. 
@@ -84,10 +82,16 @@ If you would like to make a smaller dedication, you may use the `\dedication{}` 
 I've seen this after the acknowledgements if there is both, but I don't know if there is any set order. Either way, this is after the abstract.
 
 ### Main body content
-I would recommend you make individual .tex files for your chapters and incorporate them into main.tex using `\include{}` commands. The template currently some things written into the document, but that's only to show what the chapters look like.
+I would recommend you make individual .tex files for your chapters and incorporate them into main.tex using `\include{}` commands. The template currently has some things written into the document, but that's only to show what the chapters look like.
+
+#### Images, Tables, and Schemes
+
+There is an example of an image and a table in the methods.tex file.
+
+I have, for the benefit of other ChemEs, provided an example of a scheme environment and already inluded it into the TOC. You may remove this by deleting lines [152-156](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L152-L156)
 
 ### Bibliography
-I leave this up to you in case you have a preference of BibLaTeX vs. BibTex. The guidelines state to "conform to generally accepted practice in the discipline," so it's on you to get the .bst and incorporate your bib file.
+I leave this up to you in case you have a preference of BibLaTeX vs. BibTex. The guidelines state to "conform to generally accepted practice in the discipline," so it's on you to get the .bst and incorporate your bib file. I provide an example for the RSC citation style.
 
 # Sources
 The information for the formatting is sourced from the Electronic Thesis and Disseration Style Guide from the Rutgers School of Graduate Studies. You can find that resource here: https://grad.rutgers.edu/academics/graduation/electronic-thesis-and-dissertation-style-guide
@@ -97,6 +101,7 @@ The information for the formatting is sourced from the Electronic Thesis and Dis
 - If you are co-advised, the abstract currently does not change to acknowledge there is more than one advisor. You can change the RUAbstract.sty file to add an `s` to Director on line 36.
 - I'm testing this as I work on my thesis so errors may exist.
 - It's on you to verify that the template is acceptable for your department.
+- I am trying to make this cleaner by having a .cls instead of a bunch of .sty's, but most realistically is unlikely to happen at this point.
 
 # License
 I am publishing this under the LaTeX Project Public License 1.3c. A copy may be seen here: https://www.latex-project.org/lppl.txt.
