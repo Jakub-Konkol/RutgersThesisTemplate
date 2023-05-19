@@ -41,6 +41,19 @@ not set. Please fix this.}
 }
 \newcommand*{\@campus}{New Brunswick}
 
+%Thank you https://tex.stackexchange.com/a/300212
+\newcount\myloopcounter
+
+\newcommand{\repeatit}[2][10]{%
+  \myloopcounter0% initialize the loop counter
+  \loop\ifnum\myloopcounter < #1 % Test if the loop counter is < #1
+  #2%
+  \advance\myloopcounter by 1 % 
+  \repeat % start again
+}
+
+\newcommand*{\numSig}{4}
+
 \DeclareOption{CBE}{%
 \renewcommand{\@department}{Chemical and Biochemical Engineering}}
 \DeclareOption{AE}{%
@@ -61,13 +74,16 @@ not set. Please fix this.}
 \renewcommand{\@department}{Mechanical Engineering}}
 \DeclareOption{PhD}{%
 \renewcommand{\@thesisType}{Doctor of Philosophy}%
-\setboolean{isphd}{true}}
+\setboolean{isphd}{true}
+\renewcommand{\numSig}{4}}
 \DeclareOption{MS}{%
 \renewcommand{\@thesisType}{Master of Science}%
-\setboolean{isphd}{false}}
+\setboolean{isphd}{false}
+\renewcommand{\numSig}{3}}
 \DeclareOption{ME}{%
 \renewcommand{\@thesisType}{Master of Engineering}%
-\setboolean{isphd}{false}}
+\setboolean{isphd}{false}
+\renewcommand{\numSig}{3}}
 \DeclareOption{proposal}{%
 \setboolean{proposal}{true}}
 \ProcessOptions\relax
@@ -91,14 +107,9 @@ not set. Please fix this.}
 {Written under the direction of\unskip\strut\par}
 {\@supervisor\unskip\strut\par}
 {And approved by\unskip\strut\par}
+\repeatit[\numSig]{%
 \vspace{0.5cm}
-{\rule{3in}{0.4pt}\unskip\strut\par}
-\vspace{0.5cm}
-{\rule{3in}{0.4pt}\unskip\strut\par}
-\vspace{0.5cm}
-{\rule{3in}{0.4pt}\unskip\strut\par}
-\vspace{0.5cm}
-{\rule{3in}{0.4pt}\unskip\strut\par}
+{\rule{3in}{0.4pt}\unskip\strut\par}}
 {\@campus, NJ -- \@graduationDate}
 \end{titlepage}
 }
