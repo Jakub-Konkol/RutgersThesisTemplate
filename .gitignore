@@ -1,0 +1,13 @@
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.los
+*.lot
+*.out
+*.gz
+*.toc
+*.sav
+rsc-main.bib
+*.cls

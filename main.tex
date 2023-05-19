@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the LaTeX template for a Rutgers PhD or Masters Thesis
+% Copyright J. A. Konkol 2023
+% Distributed under LPPL 1.3 https://www.latex-project.org//lppl/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage[super,sort&compress,comma]{natbib}
+\usepackage{rsc}
+\usepackage{graphicx}
+\usepackage[left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\usepackage[breaklinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{ifthen}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{mciteplus}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template specific packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[CBE,PhD]{RUTitle}
+\usepackage{RUCopy}
+\usepackage{RUAbstract}
+\usepackage{RUDedication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These commands rename the list of figures, list of tables, and add double spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\mtcontentsname\contentsname
+\renewcommand\contentsname{\MakeUppercase\mtcontentsname}
+\renewcommand{\listfigurename}{\MakeUppercase{List of Illustrations}}
+\renewcommand{\listtablename}{\MakeUppercase{List of Tables}}
+\doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These commands set the style for the chapter titles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titlespacing*{\chapter}{0em}{0em}{0em}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp{$\vert$}\hsp}{0pt}{\Huge\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author details section
+%%%%%%%%%%%%%%%%
+% Replace the following as appropriate
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{A Student}
+\title{Very impressive work}
+\graduationDate{June 2023}
+\supervisor{A Professor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Command section
+%%%%%%%%%%%%%%%%
+% In the follow section you may define new commands
+% for your thesis. Some example commands are provided.
+% An example for a new float is also provided
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\wavenumber}{cm$^{-1}$}
+\newcommand{\syncCoords}[2]{$\Phi({#1}, {#2})$}%Command to automatically format synchronous coordinates
+\newcommand{\asyncCoords}[2]{$\Psi({#1}, {#2})$}%Command to automatically format asynchronous coordinates
+
+\usepackage{newfloat}
+
+\DeclareFloatingEnvironment[
+  fileext = los ,
+  listname = {List of Schemes} ,
+  name = Scheme
+]{scheme}
+\renewcommand{\listschemename}{\MakeUppercase{List of Schemes}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document section
+%%%%%%%%%%%%%%%%
+% The following section is where you place your content.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\pagestyle{plain}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright page
+%%%%%%%%%%%%%%%%
+% Remove the command \copyrightPage if this is for a proposal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\copyrightPage
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+%%%%%%%%%%%%%%%%
+% Insert your abstract into the following. You may also provide a tex
+% file containing the abstract using \input{}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\input{./Chapters/abstract}
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements/Dedication
+%%%%%%%%%%%%%%%%
+% Feel free to remove these if you don't want them. Do not include
+% if this is a proposal document.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgments}
+I acknowledge these people.
+\end{acknowledgments}
+
+\dedication{I dedicate this to}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of content 
+%%%%%%%%%%%%%%%%
+% The following commands at the list of illustrations, tables, and schemes
+% to the table of contents. If adding a different float environment, use
+% the schemes as an example
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listschemename}
+\listofschemes
+
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis content
+%%%%%%%%%%%%%%%%
+% This is where your thesis content goes. You should use separate .tex
+% files using \include{}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./chapters/introduction}
+\include{./chapters/methods}
+\include{./chapters/conclusion}
+\appendix
+\include{./chapters/appendix}
+\backmatter
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{sample}
+\bibliographystyle{rsc}
+\end{document}

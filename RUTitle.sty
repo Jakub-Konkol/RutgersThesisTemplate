@@ -1,0 +1,105 @@
+%% RUTitle.sty
+%% Copyright 2023 J. A. Konkol
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is J. A. Konkol.
+% This work consists of the files RUAbstract.sty, RUCopy.sty,
+% RUDedication.sty and RUTitle.sty
+
+\ProvidesPackage{RUTitle}[2022/12/27 Title package for Rutgers CBE Thesis]
+\RequirePackage{ifthen}
+
+\newcommand*{\department}[1]{\gdef\@department{#1}%
+}
+\newcommand*{\@department}{Department}
+
+\newcommand*{\thesisType}[1]{\gdef\@thesisType{#1}%
+}
+\newcommand*{\@thesisType}{Doctor of Philosophy}
+\newboolean{isphd}
+\setboolean{isphd}{true}
+\newboolean{proposal}
+\setboolean{proposal}{false}
+
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}%
+}
+\newcommand*{\@supervisor}{\texttt{\string\supervisor} currently
+not set. Please fix this.}
+\newcommand*{\graduationDate}[1]{\gdef\@graduationDate{#1}%
+}
+\newcommand*{\@graduationDate}{Janmaytober 20XX}
+\newcommand*{\campus}[1]{\gdef\@campus{#1}%
+}
+\newcommand*{\@campus}{New Brunswick}
+
+\DeclareOption{CBE}{%
+\renewcommand{\@department}{Chemical and Biochemical Engineering}}
+\DeclareOption{AE}{%
+\renewcommand{\@department}{Aerospace Engineering}}
+\DeclareOption{BME}{%
+\renewcommand{\@department}{Biomedical Engineering}}
+\DeclareOption{CEE}{%
+\renewcommand{\@department}{Civil and Environmental Engineering}}
+\DeclareOption{ECE}{%
+\renewcommand{\@department}{Electrical and Computer Engineering}}
+\DeclareOption{EnvE}{%
+\renewcommand{\@department}{Environmental Engineering}}
+\DeclareOption{ISE}{%
+\renewcommand{\@department}{Industrial and Systems Engineering}}
+\DeclareOption{MSE}{%
+\renewcommand{\@department}{Materials Science and Engineering}}
+\DeclareOption{MAE}{%
+\renewcommand{\@department}{Mechanical Engineering}}
+\DeclareOption{PhD}{%
+\renewcommand{\@thesisType}{Doctor of Philosophy}%
+\setboolean{isphd}{true}}
+\DeclareOption{MS}{%
+\renewcommand{\@thesisType}{Master of Science}%
+\setboolean{isphd}{false}}
+\DeclareOption{ME}{%
+\renewcommand{\@thesisType}{Master of Engineering}%
+\setboolean{isphd}{false}}
+\DeclareOption{proposal}{%
+\setboolean{proposal}{true}}
+\ProcessOptions\relax
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+\centering
+{\scshape \MakeUppercase{\@title} \par}
+\vspace{0.5cm}
+{by \par}
+\vspace{0.5cm}
+{\MakeUppercase{\@author}\unskip\strut\par}
+\vspace{0.5cm}
+{A \ifthenelse{\boolean{isphd}}{dissertation}{thesis}\ifthenelse{\boolean{proposal}}{ proposal}{} submitted to the\unskip\strut\par}
+{School of Graduate Studies\unskip\strut\par}
+{Rutgers, The State University of New Jersey\unskip\strut\par}
+{In partial fulfillment of the requirements\unskip\strut\par}
+{For the degree of\unskip\strut\par}
+{\@thesisType\unskip\strut\par}
+{Graduate program in \@department\unskip\strut\par}
+{Written under the direction of\unskip\strut\par}
+{\@supervisor\unskip\strut\par}
+{And approved by\unskip\strut\par}
+\vspace{0.5cm}
+{\rule{3in}{0.4pt}\unskip\strut\par}
+\vspace{0.5cm}
+{\rule{3in}{0.4pt}\unskip\strut\par}
+\vspace{0.5cm}
+{\rule{3in}{0.4pt}\unskip\strut\par}
+\vspace{0.5cm}
+{\rule{3in}{0.4pt}\unskip\strut\par}
+{\@campus, NJ -- \@graduationDate}
+\end{titlepage}
+}
+\endinput
