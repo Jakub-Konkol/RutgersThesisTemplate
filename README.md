@@ -1,5 +1,5 @@
 # Rutgers Thesis Template
- A latex template formatted for Rutgers thesis/dissertations.
+ A latex template formatted for Rutgers thesis/dissertations and their proposals.
  
  This project is not affiliated with Rutgers.
  
