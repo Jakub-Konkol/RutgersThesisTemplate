@@ -3,6 +3,9 @@
  
  This project is not affiliated with Rutgers.
  
+ ## What you get
+ This repository provides a template for a proposal, master's thesis, and doctoral dissertation in one go. For an example of thesis/dissertation output, please look at [main.pdf](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.pdf). For an example of the proposal, please look at [main_Proposal.pdf](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main_Proposal.pdf).
+ 
  ## How to use
  
  Begin by downloading this folder and it's contents and then unzipping it. The following will list the 
