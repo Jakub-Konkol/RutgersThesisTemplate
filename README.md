@@ -104,7 +104,7 @@ The information for the formatting is sourced from the Electronic Thesis and Dis
 - If you are co-advised, the abstract currently does not change to acknowledge there is more than one advisor. You can change the RUAbstract.sty file to add an `s` to Director on [line 36](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/RUAbstract.sty#L36).
 - I'm testing this as I work on my thesis so errors may exist.
 - It's on you to verify that the template is acceptable for your department.
-- I am trying to make this cleaner by having a .cls instead of a bunch of .sty's, but most realistically is unlikely to happen at this point.
+- I am trying to make this cleaner by having a .cls instead of a bunch of .sty's, but realistically that's unlikely to happen at this point.
 - It works on my machine :tm: ¯\\_(ツ)_/¯ I'm using this with TexMaker 5.1.3 on Windows 10 with MikTeX as my backend. I can't promise I can help you figure out why it does/n't work for you, but if you post an issue I will try to help when I have time.
 
 # License
