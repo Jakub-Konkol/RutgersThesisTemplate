@@ -91,7 +91,9 @@ I would recommend you make individual .tex files for your chapters and incorpora
 
 There is an example of an image and a table in the methods.tex file.
 
-I have, for the benefit of other ChemEs, provided an example of a scheme environment and already inluded it into the TOC. You may remove this by deleting lines [152-156](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L152-L156)
+I have, for the benefit of other ChemEs, provided an example of a scheme environment and already included it into the TOC. You may remove this by deleting lines [152-156](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/main.tex#L152-L156)
+
+I don't know if the list of schemes is technically allowed in the dissertation style, we'll find out in a year or so.
 
 ### Bibliography
 I leave this up to you in case you have a preference of BibLaTeX vs. BibTex. The guidelines state to "conform to generally accepted practice in the discipline," so it's on you to get the .bst and incorporate your bib file. I provide an example for the RSC citation style.
