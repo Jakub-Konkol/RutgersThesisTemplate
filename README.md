@@ -101,7 +101,7 @@ The information for the formatting is sourced from the Electronic Thesis and Dis
 
 # Limitations
 - I made this from the standpoint of an engineer so I included the engineering degrees. If you are interested in using this template outside of engineering, let me know and I can incorporate your field for you.
-- If you are co-advised, the abstract currently does not change to acknowledge there is more than one advisor. You can change the RUAbstract.sty file to add an `s` to Director on line 36.
+- If you are co-advised, the abstract currently does not change to acknowledge there is more than one advisor. You can change the RUAbstract.sty file to add an `s` to Director on [line 36](https://github.com/Jakub-Konkol/RutgersThesisTemplate/blob/main/RUAbstract.sty#L36).
 - I'm testing this as I work on my thesis so errors may exist.
 - It's on you to verify that the template is acceptable for your department.
 - I am trying to make this cleaner by having a .cls instead of a bunch of .sty's, but most realistically is unlikely to happen at this point.
